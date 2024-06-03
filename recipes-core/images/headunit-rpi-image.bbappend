@@ -17,8 +17,6 @@ META_OE = " \
 FLUTTER_APP = " \
 	headunit \
 	headunit-dev \
-	touchscreen-init \
-	window-init \
 	flutter-pi \
 	flutter-engine \
 "
