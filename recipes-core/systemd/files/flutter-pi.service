@@ -1,0 +1,13 @@
+[Unit]
+Description=Flutter Pi Service
+After=network.target
+
+[Service]
+Environment=LD_LIBRARY_PATH=/usr/lib
+ExecStart=flutter-pi --release .
+WorkingDirectory=/flutter/flutter_head_unit/3.19.2/release/
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

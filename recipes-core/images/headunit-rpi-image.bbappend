@@ -1,12 +1,7 @@
 ENV_SETTING = " \
 	wpa-supplicant \
-	libsocketcan \
 	openssh \
 	bcm2835-dev \
-	udev-rules-rpi \
-	udev-extraconf \
-	supervisor \
-	xdotool \
 "
 
 META_OE = " \
@@ -17,8 +12,11 @@ META_OE = " \
 FLUTTER_APP = " \
 	headunit \
 	headunit-dev \
+	headunitffi \
 	flutter-pi \
-	flutter-engine \
+	flutter-pi-service \
+	libegl-mesa-dev \
+	libgles3-mesa-dev \
 "
 	
 

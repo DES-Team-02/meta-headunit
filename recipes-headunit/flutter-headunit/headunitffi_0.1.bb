@@ -1,5 +1,5 @@
-SUMMARY = "Flutter Headunit Application"
-DESCRIPTION = "Flutter Headunit Application"
+SUMMARY = "Flutter Headunit ffi"
+DESCRIPTION = "Flutter Headunit ffi"
 AUTHOR = "Google"
 HOMEPAGE = "https://github.com/Lagavulin9/Flutter_Head-Unit"
 BUGTRACKER = "https://github.com/Lagavulin9/Flutter_Head-Unit/issues"
@@ -12,16 +12,16 @@ SRC_URI = "git://github.com/Lagavulin9/Flutter_Head-Unit.git;protocol=https;bran
 
 S = "${WORKDIR}/git"
 
-DEPENDS += " flutter-pi "
+DEPENDS = " \
+           common-api-c++ \
+           vsomeip \
+           common-api-c++-someip \
+"
 
-PUBSPEC_APPNAME = "flutter_head_unit"
-FLUTTER_APPLICATION_INSTALL_PREFIX = "/flutter"
-
-inherit flutter-app
+inherit pkgconfig cmake
 
 INSANE_SKIP:${PN} += "file-rdeps ldflags"
 INSANE_SKIP:${PN}-dev += "file-rdeps dev-elf"
-
 
 
 PACKAGES = "${PN} ${PN}-dev ${PN}-dbg ${PN}-src"
