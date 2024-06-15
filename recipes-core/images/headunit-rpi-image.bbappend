@@ -1,7 +1,9 @@
 ENV_SETTING = " \
+	nano \
 	wpa-supplicant \
 	openssh \
 	bcm2835-dev \
+	net-tools \
 "
 
 META_OE = " \
